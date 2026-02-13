@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.808);
+    h1{
+        color: rgba(255, 255, 255, 0.765);
+        border: solid white 3px;
+        padding: 3rem;
+        text-align: center;
+        text-decoration: underline;
+    
+        
+    }
+}
+
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+.box{
+    flex: 0 0 calc(100%/5 - 2* 8px);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    background-color: white;
+ 
+    
+}
+
+
+.red{
+    background-color: red;
+
+}
+.blue{
+    background-color: blue;
+
+}
+
+
+.green{
+    background-color: green;
+
+
+}
+
+
+
+
+
+

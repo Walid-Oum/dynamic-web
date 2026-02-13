@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+
+<body>
+
+    <!-- INLINE ZONDER SCRIPT-->
+    <!-- <button onclick="
+        let btn = document.getElementById('button1');
+        if(btn.textContent == 'Hallo!'){
+            btn.textContent = 'Tot ziens!'
+        }
+        else{
+            btn.textContent = 'Hallo!'
+        }
+        
+        
+        " id="button1">Hallo!</button> -->
+
+
+    <button id="button1" class="buttons">Hallo!</button>
+
+
+
+    <!-- INLINE MET SCRIPT, BELANGRIJK SCRIPT MOET HELEMAAL BENEDEN (NET VOOR SLUITINGSTAG VAN BODY) -->
+
+    <!-- <script>
+        'use strict'
+
+        //we halen eerst de button
+        let btn = document.getElementById("button1");
+
+
+        btn.addEventListener("click", function () {
+            let text = this.textContent; 
+
+            switch (text) {
+                case "Hallo!":
+                    this.textContent = "Tot ziens!";
+                    break;
+                case "Tot ziens!":
+                    this.textContent = "Hallo!"
+            }
+
+        })
+
+    </script> -->
+
+
+    <!-- TWEEDE VERSIE INLINE MAAR MET SELECTOR DIE EEN COLLECTIE TERUGGEEFT (LOOP) -->
+<!-- 
+    <script>
+
+        "use strict"
+        let btns = document.getElementsByClassName("buttons")
+
+
+
+        for (let button of btns) {
+            button.addEventListener("click", function () {
+
+                switch (button.textContent) {
+                    case "Hallo!":
+                        this.textContent = "Tot ziens!";
+                        break;
+
+                    case "Tot ziens!":
+                        this.textContent = "Hallo!";
+                        break;
+                }
+            })
+        }
+
+    </script> -->
+
+
+
+
+    <script src="buttonchange.js"></script>
+
+
+
+</body>
+
+</html>
