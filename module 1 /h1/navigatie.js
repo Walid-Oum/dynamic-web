@@ -1,12 +1,3 @@
-// <nav id="mainMenu"></nav>
-// <div class="content">
-//     <h1>Hoofdstuk 1</h1>
-//     <h2>Deel 1.1</h2>
-//     <h2>Deel 1.2</h2>
-//     <h1>Hoofdstuk 2</h1>
-//     <h2>Deel 2.1</h2>
-
-
 'use strict'
 
 
