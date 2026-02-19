@@ -57,11 +57,13 @@ function voegH1Toe(header) {
 
 }
 
-
+/**
+ * (voor later: extra check op textcontent deel 2.1 hangt bvb onder hoofdstuk 2)
+ */
 function voegH2Toe(header, currentLi) {
 
-    if(!currentLi){return}//geen h1 
-    if (!subUl) {
+    if(!currentLi){return}//geen h1 dus ook geen sublijst aanmaken
+    if (!subUl) { //maak een sublijst als die nog niet bestaat
         subUl = document.createElement("ul");
         currentLi.appendChild(subUl)
     }
