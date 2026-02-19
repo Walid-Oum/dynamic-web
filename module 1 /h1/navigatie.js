@@ -2,7 +2,7 @@
 
 
 let nav = document.getElementById('mainMenu');
-let mainUl = document.createElement('ul');
+let mainUl = document.createElement('ul'); //hoofdlijst
 
 
 
@@ -15,8 +15,8 @@ let headers = document.querySelectorAll('.content h1, .content h2');
 
 
 
-let currentLi = null;
-let subUl = null;
+let currentLi = null; //de laatste toegevoegde h1, zodat eventuele h2's daaronder kunnen hangen 
+let subUl = null; //sublijst binnen h1, voor eventuele h2's
 
 
 for (let header of headers) {
@@ -35,6 +35,12 @@ for (let header of headers) {
 }
 
 
+/**
+ * voegt h1 aan de hoofdlijst
+ * - maakt een li + a element aan en geeft de header in de pagina een id (om ernaartoe te scrollen)
+ */
+
+
 function voegH1Toe(header) {
     let li = document.createElement('li');
     let a = document.createElement('a');
@@ -47,14 +53,14 @@ function voegH1Toe(header) {
     mainUl.appendChild(li);
     li.appendChild(a);
     currentLi = li
-    subUl = null; 
+    subUl = null; //subul reseten want nieuwe h1 -> nieuwe sublijst 
 
 }
 
 
 function voegH2Toe(header, currentLi) {
 
-    if(!currentLi){return}
+    if(!currentLi){return}//geen h1 
     if (!subUl) {
         subUl = document.createElement("ul");
         currentLi.appendChild(subUl)
